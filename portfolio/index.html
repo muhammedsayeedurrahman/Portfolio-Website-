@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muhammed Sayeedur Rahman | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <img src="passport photo 24 August 2023.jpg" alt="Profile Photo" class="profile-pic" />
+    <h1>Muhammed Sayeedur Rahman</h1>
+    <p>Aspiring Software Developer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="fade-in">
+      <h2>About Me</h2>
+      <p>
+        I'm a motivated Computer Science student passionate about web development,
+        scalable systems, and solving real-world problems through code.
+      </p>
+    </section>
+
+    <section id="skills" class="fade-in">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Python, C, C++</li>
+        <li>SQL, MySQL</li>
+        <li>OOPs, DBMS, DSA</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="fade-in">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Online Blood Bank Management System</h3>
+        <p>A PHP-MySQL web app to manage blood donors and requestors.</p>
+      </div>
+      <div class="project">
+        <h3>To-Do List Web App</h3>
+        <p>A task manager built using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project">
+        <h3>Temperature Converter</h3>
+        <p>A simple web tool to convert temperatures between units.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+      <h2>Contact</h2>
+      <p>Email: muhammedsayeedurrahman@gmail.com</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/muhammed-sayeedur-rahman-439389324" target="_blank">Profile</a></p>
+      <p>GitHub: <a href="https://github.com/muhammedsayeedurrahman" target="_blank">Repo</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;  Muhammed Sayeedur Rahman</p>
+  </footer>
+
+  <script>
+    // Animation on scroll
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeInElements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
